@@ -1,6 +1,15 @@
 (define (domain Gripper)
     
     ; Just a comment
+    ;optimal plan: 
+;I think optimal plan is like this.
+; move from room1 to room2
+; carry 1 heavy object from room2 to room4 and come back to room3
+; carry 1 heavy object from room3 to room4 and come back to room1
+; carry 2 light objects from room1 and room2 to room4 and come back to room3
+;carry light object from room3 to room4 and finished.
+; so when the robot carry heavy object, the robot go to the goal.
+; But whene the robot carry light objects, the robot has two grippers so it is better to carry two objects at once.
     (:requirements :strips)
     
     (:predicates
@@ -59,3 +68,4 @@
                 )
     )
 )
+
